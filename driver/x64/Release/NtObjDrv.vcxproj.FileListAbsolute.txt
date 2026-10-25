@@ -1,0 +1,1 @@
+C:\Users\Kristian\Downloads\NtObjExplorer\NtObjExplorer\driver\x64\Release\NtObjDrv.sys

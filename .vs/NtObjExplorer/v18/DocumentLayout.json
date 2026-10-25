@@ -1,0 +1,145 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Kristian\\Downloads\\NtObjExplorer\\NtObjExplorer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9F8E7D6C-5B4A-4321-8765-ABCDEF012345}|app\\ntobj.vcxproj|C:\\Users\\Kristian\\Downloads\\NtObjExplorer\\NtObjExplorer\\app\\objects.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9F8E7D6C-5B4A-4321-8765-ABCDEF012345}|app\\ntobj.vcxproj|solutionrelative:app\\objects.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F8E7D6C-5B4A-4321-8765-ABCDEF012345}|app\\ntobj.vcxproj|C:\\Users\\Kristian\\Downloads\\NtObjExplorer\\NtObjExplorer\\app\\ntapi.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9F8E7D6C-5B4A-4321-8765-ABCDEF012345}|app\\ntobj.vcxproj|solutionrelative:app\\ntapi.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F8E7D6C-5B4A-4321-8765-ABCDEF012345}|app\\ntobj.vcxproj|C:\\Users\\Kristian\\Downloads\\NtObjExplorer\\NtObjExplorer\\app\\ntapi.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9F8E7D6C-5B4A-4321-8765-ABCDEF012345}|app\\ntobj.vcxproj|solutionrelative:app\\ntapi.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F8E7D6C-5B4A-4321-8765-ABCDEF012345}|app\\ntobj.vcxproj|C:\\Users\\Kristian\\Downloads\\NtObjExplorer\\NtObjExplorer\\app\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9F8E7D6C-5B4A-4321-8765-ABCDEF012345}|app\\ntobj.vcxproj|solutionrelative:app\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-4A7B-8C9D-0E1F2A3B4C5D}|driver\\NtObjDrv.vcxproj|C:\\Users\\Kristian\\Downloads\\NtObjExplorer\\NtObjExplorer\\driver\\driver.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-4A7B-8C9D-0E1F2A3B4C5D}|driver\\NtObjDrv.vcxproj|solutionrelative:driver\\driver.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F8E7D6C-5B4A-4321-8765-ABCDEF012345}|app\\ntobj.vcxproj|C:\\Users\\Kristian\\Downloads\\NtObjExplorer\\NtObjExplorer\\app\\ntobj_app.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9F8E7D6C-5B4A-4321-8765-ABCDEF012345}|app\\ntobj.vcxproj|solutionrelative:app\\ntobj_app.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-4A7B-8C9D-0E1F2A3B4C5D}|driver\\NtObjDrv.vcxproj|C:\\Users\\Kristian\\Downloads\\NtObjExplorer\\NtObjExplorer\\driver\\driver.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-4A7B-8C9D-0E1F2A3B4C5D}|driver\\NtObjDrv.vcxproj|solutionrelative:driver\\driver.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "objects.cpp",
+              "DocumentMoniker": "C:\\Users\\Kristian\\Downloads\\NtObjExplorer\\NtObjExplorer\\app\\objects.cpp",
+              "RelativeDocumentMoniker": "app\\objects.cpp",
+              "ToolTip": "C:\\Users\\Kristian\\Downloads\\NtObjExplorer\\NtObjExplorer\\app\\objects.cpp",
+              "RelativeToolTip": "app\\objects.cpp",
+              "ViewState": "AgIAACACAAAAAAAAAAAIwC0CAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-10-23T11:45:40.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ntapi.h",
+              "DocumentMoniker": "C:\\Users\\Kristian\\Downloads\\NtObjExplorer\\NtObjExplorer\\app\\ntapi.h",
+              "RelativeDocumentMoniker": "app\\ntapi.h",
+              "ToolTip": "C:\\Users\\Kristian\\Downloads\\NtObjExplorer\\NtObjExplorer\\app\\ntapi.h",
+              "RelativeToolTip": "app\\ntapi.h",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-10-23T11:45:34.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ntapi.cpp",
+              "DocumentMoniker": "C:\\Users\\Kristian\\Downloads\\NtObjExplorer\\NtObjExplorer\\app\\ntapi.cpp",
+              "RelativeDocumentMoniker": "app\\ntapi.cpp",
+              "ToolTip": "C:\\Users\\Kristian\\Downloads\\NtObjExplorer\\NtObjExplorer\\app\\ntapi.cpp",
+              "RelativeToolTip": "app\\ntapi.cpp",
+              "ViewState": "AgIAAKoBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-10-23T11:44:30.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\Kristian\\Downloads\\NtObjExplorer\\NtObjExplorer\\app\\main.cpp",
+              "RelativeDocumentMoniker": "app\\main.cpp",
+              "ToolTip": "C:\\Users\\Kristian\\Downloads\\NtObjExplorer\\NtObjExplorer\\app\\main.cpp",
+              "RelativeToolTip": "app\\main.cpp",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-10-23T11:44:13.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ntobj_app.h",
+              "DocumentMoniker": "C:\\Users\\Kristian\\Downloads\\NtObjExplorer\\NtObjExplorer\\app\\ntobj_app.h",
+              "RelativeDocumentMoniker": "app\\ntobj_app.h",
+              "ToolTip": "C:\\Users\\Kristian\\Downloads\\NtObjExplorer\\NtObjExplorer\\app\\ntobj_app.h",
+              "RelativeToolTip": "app\\ntobj_app.h",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAnwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-10-22T21:10:08.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "driver.h",
+              "DocumentMoniker": "C:\\Users\\Kristian\\Downloads\\NtObjExplorer\\NtObjExplorer\\driver\\driver.h",
+              "RelativeDocumentMoniker": "driver\\driver.h",
+              "ToolTip": "C:\\Users\\Kristian\\Downloads\\NtObjExplorer\\NtObjExplorer\\driver\\driver.h",
+              "RelativeToolTip": "driver\\driver.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-10-22T19:26:52.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "driver.cpp",
+              "DocumentMoniker": "C:\\Users\\Kristian\\Downloads\\NtObjExplorer\\NtObjExplorer\\driver\\driver.cpp",
+              "RelativeDocumentMoniker": "driver\\driver.cpp",
+              "ToolTip": "C:\\Users\\Kristian\\Downloads\\NtObjExplorer\\NtObjExplorer\\driver\\driver.cpp",
+              "RelativeToolTip": "driver\\driver.cpp",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAGsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-10-22T19:24:25.948Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

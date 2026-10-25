@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  NtObjDrv.vcxproj  [v1.3 standalone-km 2026-10-23]
+
+  Builds the NtObjDrv kernel-mode WDM driver WITHOUT requiring the
+  WDK Visual Studio Integration (VSIX).  Only the WDK headers and
+  libraries must be present under Windows Kits\10.
+
+  To force a specific WDK version:
+    msbuild /p:NtObjWdkVersion=10.0.28000.0
+-->
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+
+  <!-- ============================================================
+       AUTO-DETECT WDK
+       ============================================================ -->
+  <PropertyGroup>
+    <NtObjWdkRoot Condition="'$(NtObjWdkRoot)' == ''">C:\Program Files (x86)\Windows Kits\10</NtObjWdkRoot>
+  </PropertyGroup>
+
+  <!-- Auto-detect: find the highest version directory that contains km\ntddk.h.
+       We enumerate Include\* subdirectories and pick the last one with km\ntddk.h. -->
+  <PropertyGroup Condition="'$(NtObjWdkVersion)' == ''">
+    <!-- Get all subdirectory names under Include, sorted ascending.
+         We iterate and keep overwriting, so the last (highest) wins. -->
+    <_NtObjIncRoot>$(NtObjWdkRoot)\Include</_NtObjIncRoot>
+  </PropertyGroup>
+
+  <!-- Use static file existence checks for common WDK versions -->
+  <PropertyGroup Condition="'$(NtObjWdkVersion)' == ''">
+    <NtObjWdkVersion Condition="Exists('$(NtObjWdkRoot)\Include\10.0.17763.0\km\ntddk.h')">10.0.17763.0</NtObjWdkVersion>
+    <NtObjWdkVersion Condition="Exists('$(NtObjWdkRoot)\Include\10.0.18362.0\km\ntddk.h')">10.0.18362.0</NtObjWdkVersion>
+    <NtObjWdkVersion Condition="Exists('$(NtObjWdkRoot)\Include\10.0.19041.0\km\ntddk.h')">10.0.19041.0</NtObjWdkVersion>
+    <NtObjWdkVersion Condition="Exists('$(NtObjWdkRoot)\Include\10.0.22000.0\km\ntddk.h')">10.0.22000.0</NtObjWdkVersion>
+    <NtObjWdkVersion Condition="Exists('$(NtObjWdkRoot)\Include\10.0.22621.0\km\ntddk.h')">10.0.22621.0</NtObjWdkVersion>
+    <NtObjWdkVersion Condition="Exists('$(NtObjWdkRoot)\Include\10.0.26100.0\km\ntddk.h')">10.0.26100.0</NtObjWdkVersion>
+    <NtObjWdkVersion Condition="Exists('$(NtObjWdkRoot)\Include\10.0.26200.0\km\ntddk.h')">10.0.26200.0</NtObjWdkVersion>
+    <NtObjWdkVersion Condition="Exists('$(NtObjWdkRoot)\Include\10.0.27000.0\km\ntddk.h')">10.0.27000.0</NtObjWdkVersion>
+    <NtObjWdkVersion Condition="Exists('$(NtObjWdkRoot)\Include\10.0.28000.0\km\ntddk.h')">10.0.28000.0</NtObjWdkVersion>
+    <NtObjWdkVersion Condition="Exists('$(NtObjWdkRoot)\Include\10.0.29000.0\km\ntddk.h')">10.0.29000.0</NtObjWdkVersion>
+  </PropertyGroup>
+
+  <!-- Now derive paths from the detected/forced version -->
+  <PropertyGroup Condition="'$(NtObjWdkVersion)' != ''">
+    <_NtObjKmInc>$(NtObjWdkRoot)\Include\$(NtObjWdkVersion)\km</_NtObjKmInc>
+    <_NtObjKmCrtInc>$(NtObjWdkRoot)\Include\$(NtObjWdkVersion)\km\crt</_NtObjKmCrtInc>
+    <_NtObjSharedInc>$(NtObjWdkRoot)\Include\$(NtObjWdkVersion)\shared</_NtObjSharedInc>
+    <_NtObjKmLibDir>$(NtObjWdkRoot)\Lib\$(NtObjWdkVersion)\km\x64</_NtObjKmLibDir>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A1B2C3D4-E5F6-4A7B-8C9D-0E1F2A3B4C5D}</ProjectGuid>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <Configuration>Debug</Configuration>
+    <Platform Condition="'$(Platform)' == ''">x64</Platform>
+    <RootNamespace>NtObjDrv</RootNamespace>
+    <ProjectName>NtObjDrv</ProjectName>
+    <WindowsTargetPlatformVersion>$(LatestTargetPlatformVersion)</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+
+  <PropertyGroup>
+    <OutDir Condition="'$(OutDir)' == ''">$(ProjectDir)..\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(IntDir)' == ''">$(Platform)\$(Configuration)\</IntDir>
+    <SignMode>Off</SignMode>
+    <TreatWarningAsError>false</TreatWarningAsError>
+    <TargetExt>.sys</TargetExt>
+    <GenerateManifest>false</GenerateManifest>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+
+  <!-- ============================================================
+       Kernel-mode compiler / linker settings
+       ============================================================ -->
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\common;$(_NtObjKmInc);$(_NtObjKmCrtInc);$(_NtObjSharedInc);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_AMD64_;_WIN64;AMD64;KERNEL_MODE=1;_WIN32_WINNT=0x0A00;WINVER=0x0A00;NTDDI_VERSION=0x0A000000;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <RuntimeLibrary Condition="'$(UseDebugLibraries)' == 'true'">MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeLibrary Condition="'$(UseDebugLibraries)' != 'true'">MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalOptions>/kernel %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(_NtObjKmLibDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ntoskrnl.lib;hal.lib;bufferoverflowk.lib</AdditionalDependencies>
+      <EntryPointSymbol>GsDriverEntry</EntryPointSymbol>
+      <SubSystem>Native</SubSystem>
+      <Driver>WDM</Driver>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <GenerateManifest>false</GenerateManifest>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <ItemDefinitionGroup Condition="'$(UseDebugLibraries)' == 'true'">
+    <ClCompile>
+      <PreprocessorDefinitions>DBG=1;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(UseDebugLibraries)' != 'true'">
+    <ClCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Optimization>MaxSpeed</Optimization>
+    </ClCompile>
+  </ItemDefinitionGroup>
+
+  <ItemGroup>
+    <ClCompile Include="driver.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="driver.h" />
+  </ItemGroup>
+
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+
+  <!-- Diagnostika -->
+  <Target Name="NtObjVerifyWdk" BeforeTargets="PrepareForBuild">
+    <Message Importance="high" Condition="'$(_NtObjKmInc)' != ''" Text="NtObjDrv: WDK $(NtObjWdkVersion) km=$(_NtObjKmInc) shared=$(_NtObjSharedInc) lib=$(_NtObjKmLibDir)" />
+    <Warning Condition="'$(_NtObjKmInc)' == ''" Text="NtObjDrv: km\ntddk.h not found. Install WDK or set NtObjWdkVersion." />
+  </Target>
+  <!-- [v1.3 standalone-km 2026-10-23] -->
+</Project>

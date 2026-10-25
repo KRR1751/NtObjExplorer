@@ -1,0 +1,7 @@
+﻿  ntapi.cpp
+  drvio.cpp
+  objects.cpp
+  commands.cpp
+  main.cpp
+  Generating Code...
+  ntobj.vcxproj -> C:\Users\Kristian\Downloads\NtObjExplorer\NtObjExplorer\x64\Debug\ntobj.exe

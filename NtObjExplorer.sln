@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.10.12224.181 stable
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NtObjDrv", "driver\NtObjDrv.vcxproj", "{A1B2C3D4-E5F6-4A7B-8C9D-0E1F2A3B4C5D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ntobj", "app\ntobj.vcxproj", "{9F8E7D6C-5B4A-4321-8765-ABCDEF012345}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1B2C3D4-E5F6-4A7B-8C9D-0E1F2A3B4C5D}.Debug|x64.ActiveCfg = Debug|x64
+		{A1B2C3D4-E5F6-4A7B-8C9D-0E1F2A3B4C5D}.Debug|x64.Build.0 = Debug|x64
+		{A1B2C3D4-E5F6-4A7B-8C9D-0E1F2A3B4C5D}.Release|x64.ActiveCfg = Release|x64
+		{A1B2C3D4-E5F6-4A7B-8C9D-0E1F2A3B4C5D}.Release|x64.Build.0 = Release|x64
+		{9F8E7D6C-5B4A-4321-8765-ABCDEF012345}.Debug|x64.ActiveCfg = Debug|x64
+		{9F8E7D6C-5B4A-4321-8765-ABCDEF012345}.Debug|x64.Build.0 = Debug|x64
+		{9F8E7D6C-5B4A-4321-8765-ABCDEF012345}.Release|x64.ActiveCfg = Release|x64
+		{9F8E7D6C-5B4A-4321-8765-ABCDEF012345}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		                SolutionGuid = {D4E5F6A7-B8C9-4D0E-A1B2-C3D4E5F6A7B8}
+	EndGlobalSection
+EndGlobal
